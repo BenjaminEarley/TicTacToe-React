@@ -1,12 +1,10 @@
 import ReactDOM from 'react-dom';
-import Game from './game';
+import Game from './Game/game';
 import './index.css';
 
 function Home() {
     return (
-        <div className="home">
-            <Game/>
-        </div>
+        <Game/>
     );
 }
 
