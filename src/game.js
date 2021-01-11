@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './game.css';
 
-export function Game() {
+function Game() {
 
     const [squares, winner, xIsNext, history, handleMove, jumpTo] = useGameState()
 
@@ -80,6 +80,8 @@ function Square(props) {
 
 // ========================================
 
+export default Game
+
 function useGameState() {
     const [history, setHistory] = useState([
         {
@@ -87,7 +89,7 @@ function useGameState() {
         }
     ]);
     const [stepNumber, setStepNumber] = useState(0);
-    const [xIsNext, setXIsNext] = useState(1);
+    const [xIsNext, setXIsNext] = useState(true);
 
     function handleMove(i) {
         const slicedHistory = history.slice(0, stepNumber + 1);
